@@ -1,0 +1,15 @@
+{# template: test — include                              #}
+{# Bloque de layout reutilizable incluido en páginas.        #}
+{# Uso: {% include 'components/templates_/test.html' %} #}
+<div class="test-template grid grid-rows-[auto_1fr_auto] min-h-full"
+     data-template="test">
+  <header class="border-b p-4">
+    {% block tpl_header %}{% endblock %}
+  </header>
+  <main class="p-6">
+    {% block tpl_content %}{% endblock %}
+  </main>
+  <footer class="border-t p-4 text-sm text-gray-500">
+    {% block tpl_footer %}{% endblock %}
+  </footer>
+</div>

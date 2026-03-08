@@ -1,0 +1,9 @@
+{# molecule: test — macro #}
+{# Uso: {% from 'components/molecules/test.html' import test %} #}
+{#      {% call test() %} ... {% endcall %}                         #}
+{% macro test(attrs="") %}
+<div class="flex items-center gap-2 {{ attrs }}"
+     data-molecule="test">
+  {{ caller() if caller is defined }}
+</div>
+{% endmacro %}
